@@ -1,0 +1,12 @@
+---
+.easy-ci:lint:dockerfile:
+  variables:
+    HADOLINT_DOCKERFILE: "Dockerfile"
+  image: hadolint/hadolint:latest
+  only:
+    refs:
+      - tags
+      - branches
+  script: hadolint $HADOLINT_DOCKERFILE
+  stage: lint
+  allow_failure: true
