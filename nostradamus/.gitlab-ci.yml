@@ -1,0 +1,16 @@
+stages:
+  - lint
+  - compile
+  - test
+  - build
+
+include:
+  - local: .gitlab/ci/lint.gitlab-ci.yml
+  - local: .gitlab/ci/compile.gitlab-ci.yml
+  - local: .gitlab/ci/test.gitlab-ci.yml
+  - local: .gitlab/ci/build.gitlab-ci.yml
+  - local: .gitlab/ci/release.gitlab-ci.yml
+
+  - project: 1995parham-teaching/gitlab-ci/easy-ci
+    ref: main
+    file: "easy-ci.yml"
