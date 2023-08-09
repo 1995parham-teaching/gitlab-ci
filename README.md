@@ -39,3 +39,5 @@ Lets review our requirements:
 
 1. We need to have a `lint` stage based on `golangci-lint`.
 2. We need to have a `test` stage.
+3. We need to have a `compile` stage which compiles the code.
+4. We need to have a `build` stage which builds our Dockerfile.
