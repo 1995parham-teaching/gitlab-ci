@@ -46,6 +46,8 @@ First we are going to define a new repository name `easy-ci` which contains
 templates that you can extend in your project. These templates will reduce a huge
 number of code duplicates and make your `.gitlab-ci` cleaner and more readable.
 
+Then we extend what we defined in `easy-ci` in our project repository.
+
 ## Variables
 
 It is better to define variables on Organization scope when these variables
