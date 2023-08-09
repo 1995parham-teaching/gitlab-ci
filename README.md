@@ -25,3 +25,7 @@ least those styles and for the next step you can have tests and validation over 
 - [`.gitlab-ci.yml` keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
 
 ## Manage your `gitlab-ci`
+
+When you start with `.gitlab-ci.yml` in the root of your project, you may not know about the future but I will told you,
+in future it would be a huge file that you cannot find anything on it.
+So, it is better to start by spliting and put files in a directory (for example named it `.gitlab/ci/...`).
