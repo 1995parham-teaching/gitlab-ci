@@ -1,9 +1,0 @@
----
-stages:
-  - prepare
-
-include:
-  - local: templates/cache.gitlab-ci.yml
-  - local: templates/build.gitlab-ci.yml
-  - local: templates/lint.gitlab-ci.yml
-  - local: templates/hadolint.gitlab-ci.yml
