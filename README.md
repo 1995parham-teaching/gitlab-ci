@@ -1,21 +1,21 @@
-# Gitlab CI
+# GitLab CI
 
 ## Introduction
 
-Many companies in Iran use [Gitlab](https://about.gitlab.com/) as their VCS (Version control software), so it is essential for us
-to have a way for managing Gitlab CI over different projects with ease.
+Many companies in Iran use [GitLab](https://about.gitlab.com/) as their VCS (Version control software), so it is essential for us
+to have a way for managing GitLab CI over different projects with ease.
 
 ## Do more?
 
-Yes, you can even do more with Gitlab. I always define tasks as issues on Gitlab and then create merge request from them.
-This way, you always know which Merge request is related to which issue and then you can find out the desciption of the task.
+Yes, you can even do more with GitLab. I always define tasks as issues on GitLab and then create merge request from them.
+This way, you always know which Merge request is related to which issue, and then you can find out the description of the task.
 
-You can review MRs on Gitlab and provides comments there which is a good thing because you can know about the approvement
-and etc.
+You can review merge requests on GitLab and provides comments there which is a good thing because you can know about the
+approval, etc.
 
 ## Why we need pipelines?
 
-It is a great idea to have coding style and structure shared with you team and then you can define pipelines to validate at
+It is a great idea to have coding style and structure shared with you team, and then you can define pipelines to validate at
 least those styles and for the next step you can have tests and validation over project.
 
 ## Need to know more?
@@ -26,18 +26,28 @@ least those styles and for the next step you can have tests and validation over 
 
 ## Manage your `gitlab-ci`
 
-When you start with `.gitlab-ci.yml` in the root of your project, you may not know about the future but I will told you,
+When you start with `.gitlab-ci.yml` in the root of your project, you may not know about the future, but I will tell you,
 in future it would be a huge file that you cannot find anything on it.
-So, it is better to start by spliting and put files in a directory (for example named it `.gitlab/ci/`).
+So, it is better to start by splitting and put files in a directory (for example named it `.gitlab/ci/`).
 
-Let's do some hands-on experiece, consider you have a project named `nostrodumos` which is written in Go
+Let's do some hands-on experience, consider you have a project named `nostrodumos` which is written in Go
 and you want to enable pipelines for it.
 
 ### Define pipeline for Go
 
-Lets review our requirements:
+Let's review our requirements:
 
 1. We need to have a `lint` stage based on `golangci-lint`.
 2. We need to have a `test` stage.
 3. We need to have a `compile` stage which compiles the code.
 4. We need to have a `build` stage which builds our Dockerfile.
+
+First we are going to define a new repository name `easy-ci` which contains
+templates that you can extend in your project. These templates will reduce a huge
+number of code duplicates and make your `.gitlab-ci` cleaner and more readable.
+
+## Variables
+
+It is better to define variables on Organization scope when these variables
+indicate team's secrets instead of defining them in each project and repeat
+them many times (trust me, in future they may change).
