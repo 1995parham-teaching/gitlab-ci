@@ -1,10 +1,8 @@
 test:
   stage: test
-  image: registry.snapp.tech/docker/golang:1.20-alpine
+  image: golang:1.20-alpine
   coverage: '/total:\s*\(statements\)\s*([\d.]+)%/'
-  extends: .easy_ci:go:cache
+  extends: .easy_ci:cache:go
   script:
-    - just test
+    - go test -v ./... -covermode=atomic -coverprofile=coverage.out
     - go tool cover -func coverage.out
-  cache:
-    policy: pull
