@@ -48,6 +48,13 @@ number of code duplicates and make your `.gitlab-ci` cleaner and more readable.
 
 Then we extend what we defined in `easy-ci` in our project repository.
 
+These projects are defined on GitLab.
+
+```bash
+git subtree pull --prefix nostradamus https://gitlab.com/1995parham-teaching/nostradamus.git  main --squash                                                                                                                                                                                                                                                                                      19:03   Linux 6.4.9-zen1-1-zen
+git subtree pull --prefix easy-ci https://gitlab.com/1995parham-teaching/easy-ci.git  main --squash                                                                                                                                                                                                                                                                                      19:03   Linux 6.4.9-zen1-1-zen
+```
+
 ## Variables
 
 It is better to define variables on Organization scope when these variables
