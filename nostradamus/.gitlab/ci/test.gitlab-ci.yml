@@ -1,0 +1,8 @@
+test:
+  stage: test
+  image: golang:1.20-alpine
+  coverage: '/total:\s*\(statements\)\s*([\d.]+)%/'
+  extends: .easy_ci:cache:go
+  script:
+    - go test -v ./... -covermode=atomic -coverprofile=coverage.out
+    - go tool cover -func coverage.out

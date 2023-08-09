@@ -1,0 +1,6 @@
+---
+lint:go:
+  extends: .easy_ci:lint:go
+
+lint:dockerfile:
+  extends: .easy-ci:lint:dockerfile
