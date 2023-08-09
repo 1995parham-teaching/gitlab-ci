@@ -1,0 +1,11 @@
+compile:
+  stage: compile
+  image: registry.snapp.tech/docker/golang:1.20-alpine
+  extends: .easy_ci:cache:go
+  script:
+    - go build -o app ./main.go
+  artifacts:
+    name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}"
+    paths:
+      - ./app
+    expire_in: 1 week

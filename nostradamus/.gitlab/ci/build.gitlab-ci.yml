@@ -1,0 +1,9 @@
+---
+build:
+  extends: .easy_ci:build:docker
+  artifacts:
+    paths:
+      - ${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}.tar
+    expire_in: 1 week
+  dependencies:
+    - compile
