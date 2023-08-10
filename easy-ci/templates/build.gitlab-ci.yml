@@ -4,6 +4,8 @@
 .easy_ci:build:docker:
   image: docker:latest
   stage: build
+  services:
+    - docker:dind
   artifacts:
     paths:
       - ${CI_PROJECT_NAME}-${CI_COMMIT_SHA}.tar
