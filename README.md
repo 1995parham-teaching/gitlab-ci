@@ -52,7 +52,7 @@ number of code duplicates and make your `.gitlab-ci` cleaner and more readable.
 
 Then we extend what we defined in `easy-ci` in our project repository.
 
-These projects are defined on GitLab.
+These projects are defined on GitLab as follows:
 
 - [Easy CI](https://gitlab.com/1995parham-teaching/easy-ci)
 - [Nostradamus](https://gitlab.com/1995parham-teaching/nostradamus)
