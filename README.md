@@ -1,5 +1,9 @@
 <h1 align="center"> GitLab CI </h1>
 
+<p align="center">
+  <img alt="Gitlab pipeline status (self-managed)" src="https://img.shields.io/gitlab/pipeline-status/1995parham-teaching%2Fnostradamus?style=for-the-badge&logo=gitlab&logoColor=orange">
+</p>
+
 ## Introduction
 
 Many companies in Iran use [GitLab](https://about.gitlab.com/) as their VCS (Version control software), so it is essential for us
