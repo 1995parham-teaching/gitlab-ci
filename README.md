@@ -2,6 +2,8 @@
 
 <p align="center">
   <img alt="Gitlab pipeline status (self-managed)" src="https://img.shields.io/gitlab/pipeline-status/1995parham-teaching%2Fnostradamus?style=for-the-badge&logo=gitlab&logoColor=orange">
+
+  <img alt="banner" src="./.github/assets/banner.png" height="200px" />
 </p>
 
 ## Introduction
