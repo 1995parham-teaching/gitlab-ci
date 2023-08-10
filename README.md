@@ -1,4 +1,4 @@
-# GitLab CI
+<h1 align="center"> GitLab CI </h1>
 
 ## Introduction
 
