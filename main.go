@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"github.com/pterm/pterm"
+	"github.com/pterm/pterm/putils"
+)
 
 func main() {
-	fmt.Println("I need a good fortune")
+	if err := pterm.DefaultBigText.WithLetters(
+		putils.LettersFromStringWithStyle("Nost", pterm.NewStyle(pterm.FgCyan)),
+		putils.LettersFromStringWithStyle("trad", pterm.NewStyle(pterm.FgLightRed)),
+		putils.LettersFromStringWithStyle("amus", pterm.NewStyle(pterm.FgLightYellow)),
+	).Render(); err != nil {
+		_ = err
+	}
 }
