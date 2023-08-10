@@ -1,6 +1,6 @@
 compile:
   stage: compile
-  image: golang:1.20-alpine
+  image: golang:alpine
   extends: .easy_ci:cache:go
   script:
     - go build -o app ./main.go
